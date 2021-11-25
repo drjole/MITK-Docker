@@ -29,6 +29,7 @@ RUN apt-get update && \
         libxkbcommon-x11-0 \
         libxt-dev \
         mesa-common-dev \
+        ca-certificates \
         wget \
         unzip \
         qt5-default \
