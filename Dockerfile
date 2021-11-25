@@ -50,7 +50,7 @@ ENV PATH="/work/cmake-$CMAKE_VERSION-linux-x86_64/bin:$PATH"
 RUN wget -nv "https://github.com/ninja-build/ninja/releases/download/v$NINJA_VERSION/ninja-linux.zip" && \
     mkdir ninja && \
     unzip -d ninja ninja-linux.zip && \
-    rm ninja ninja-linux.zip
+    rm ninja-linux.zip
 ENV PATH="/work/ninja:$PATH"
 
 # Prepare MITK
