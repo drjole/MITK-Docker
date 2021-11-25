@@ -41,6 +41,7 @@ RUN apt-get update && \
         libqt5xmlpatterns5-dev \
         qt5-default \
         qtscript5-dev \
+        qttools5-dev \
         qtwebengine5-dev && \
 # Clean up
         rm -rf /var/lib/apt/lists/*
