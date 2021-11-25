@@ -58,7 +58,7 @@ RUN git clone --branch "v$MITK_VERSION" https://github.com/MITK/MITK.git MITK &&
     cmake \
         -G"Ninja" \
         -DMITK_USE_BLUEBERRY:BOOL=ON \
-        -DMITK_USE_Qt5:BOOL=ON
+        -DMITK_USE_Qt5:BOOL=ON \
         ../MITK
 
 # Build MITK
