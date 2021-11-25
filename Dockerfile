@@ -13,6 +13,7 @@ WORKDIR /work
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+# MITK dependencies
         build-essential \
         doxygen \
         git \
@@ -29,14 +30,18 @@ RUN apt-get update && \
         libxkbcommon-x11-0 \
         libxt-dev \
         mesa-common-dev \
+# Tools
         ca-certificates \
         wget \
         unzip \
-        qt5-default \
+# Qt5
+        libqt5x11extras5-dev \
+        libqt5opengl5 \
         libqt5xmlpatterns5-dev \
-        qtwebengine5-dev \
+        qt5-default \
         qtscript5-dev \
-        libqt5x11extras5-dev && \
+        qtwebengine5-dev && \
+# Clean up
         rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=newt
 
