@@ -36,7 +36,7 @@ RUN apt-get update && \
         unzip \
 # Qt5
         libqt5x11extras5-dev \
-        libqt5opengl5 \
+        libqt5opengl5-dev \
         libqt5xmlpatterns5-dev \
         qt5-default \
         qtscript5-dev \
