@@ -29,6 +29,7 @@ RUN apt-get update && \
         libxkbcommon-x11-0 \
         libxt-dev \
         mesa-common-dev \
+        wget \
         unzip \
         qt5-default \
         libqt5xmlpatterns5-dev \
