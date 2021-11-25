@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 MAINTAINER Jonas Weber <jonas.weber@dlr.de>
-LABEL Description="MITK on Ubuntu 20.04 for creating plugins base on the MITK-ProjectTemplate."
+LABEL Description="MITK on Ubuntu 20.04 for creating plugins based on the MITK-ProjectTemplate (https://github.com/MITK/MITK-ProjectTemplate)."
 
 ARG MITK_VERSION=2021.10
 ARG CMAKE_VERSION=3.22.0
@@ -43,8 +43,7 @@ RUN apt-get update && \
         qtscript5-dev \
         qttools5-dev \
         qtwebengine5-dev && \
-# Clean up
-        rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=newt
 
 # Install CMake
@@ -66,6 +65,7 @@ RUN git clone --branch "v$MITK_VERSION" https://github.com/MITK/MITK.git MITK &&
     cd MITK-superbuild && \
     cmake \
         -G"Ninja" \
+        -DCMAKE_BUILD_TYPE:STRING=Release \
         -DMITK_USE_BLUEBERRY:BOOL=ON \
         -DMITK_USE_Qt5:BOOL=ON \
         ../MITK

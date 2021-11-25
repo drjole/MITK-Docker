@@ -28,3 +28,5 @@ jobs:
         with:
           push: true
           tags: ghcr.io/drjole/mitk:latest
+          cache-from: type=registry,ref=ghcr.io/drjole/mitk:buildcache
+          cache-to: type=registry,ref=ghcr.io/drjole/mitk:buildcache,mode=max
